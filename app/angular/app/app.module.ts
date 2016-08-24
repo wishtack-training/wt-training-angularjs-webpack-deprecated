@@ -9,7 +9,6 @@
 import * as angular from 'angular';
 import {AppComponent} from './app.component';
 
-export const name = 'app';
-export const app = angular.module(name, []);
+export const appModule = angular.module('app', []);
 
-app.component(AppComponent.name, AppComponent);
+appModule.component(AppComponent.name, AppComponent);
