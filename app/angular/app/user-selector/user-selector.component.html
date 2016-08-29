@@ -1,0 +1,10 @@
+<div>
+
+    <button
+            ng-click="$ctrl.selectUser(user)"
+            ng-repeat="user in $ctrl.userList">{{ user.firstName }}</button>
+
+    <div>{{ $ctrl.selectedUser.firstName }}</div>
+
+</div>
+
