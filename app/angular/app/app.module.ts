@@ -7,8 +7,7 @@
 
 
 import * as angular from 'angular';
-import {AppComponent} from './app.component';
-
+import {UserSelectorComponent} from './user-selector/user-selector.component';
 export const appModule = angular.module('app', []);
 
-appModule.component(AppComponent.name, AppComponent);
+appModule.component(UserSelectorComponent.config.name, UserSelectorComponent.config);
