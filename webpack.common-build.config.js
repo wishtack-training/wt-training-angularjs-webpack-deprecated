@@ -24,7 +24,7 @@ module.exports = webpackMerge.smart(require('./webpack.common.config'), {
             /* Support for .ts files. */
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript-loader',
+                loaders: ['ng-annotate', 'awesome-typescript-loader'],
                 exclude: [/\.(spec|e2e|async)\.ts$/]
             }
         ]
