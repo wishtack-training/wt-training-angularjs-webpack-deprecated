@@ -7,13 +7,12 @@
 
 
 import * as $ from 'jquery';
-
-import {appModule} from '../../../../app/angular/app/app.module';
 import {User} from '../../../../app/angular/app/common/user/user';
+import {userListModule} from '../../../../app/angular/app/user-list/user-list.module';
 
 describe('UserListComponent', () => {
 
-    beforeEach(angular.mock.module(appModule.name));
+    beforeEach(angular.mock.module(userListModule.name));
 
     beforeEach(inject(($compile,
                        $http,
@@ -79,8 +78,8 @@ describe('UserListComponent', () => {
         expect(this.userStore.userList.calls.count()).toEqual(1);
         expect(this.userStore.userList).toHaveBeenCalled();
         
-        element.find('form input').val('Test');
-        element.find('form input').triggerHandler('input');
+        element.find('form input').val('Test').triggerHandler('input');
+        // this.scope.
         element.find('form button').click();
 
         this.scope.$apply();

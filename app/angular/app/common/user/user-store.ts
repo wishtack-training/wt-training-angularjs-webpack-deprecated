@@ -11,7 +11,7 @@ export class UserStore {
 
     _userList: User[] = [];
 
-    constructor(private $http) {
+    constructor(private $q) {
         'ngInject';
     }
 
@@ -25,8 +25,7 @@ export class UserStore {
     }
 
     userList(): Promise<User[]> {
-        return this.$http.get('/api/v1/users/')
-            .then((response) => response.data.objects.map(userData => new User(userData)));
+        return this.$q.resolve(this._userList);
     }
 
 }
