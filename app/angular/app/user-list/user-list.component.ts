@@ -19,16 +19,6 @@ export class UserListComponent {
     constructor(private userStore) {
         'ngInject';
 
-        this.userStore.addUser(new User({
-            firstName: 'Foo',
-            lastName: 'BAR'
-        }));
-
-        this.userStore.addUser(new User({
-            firstName: 'John',
-            lastName: 'BAR'
-        }));
-
         this._updateUserList();
 
     }

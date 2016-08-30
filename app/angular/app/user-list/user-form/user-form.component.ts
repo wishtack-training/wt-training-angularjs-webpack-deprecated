@@ -5,7 +5,7 @@
  * $Id: $
  */
 
-import {User} from '../common/user/user';
+import {User} from '../../common/user/user';
 
 export class UserFormComponent {
 
